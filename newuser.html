@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New User</title>
+</head>
+<body>
+    <h2 style="text-align: center">New User</h2>
+
+    <form>
+        <a href="https://github.com/maddiepietrek/maddiepietrek.github.io" title="Link to Home Page">Home Page</a>
+        <br>
+        <br>
+        
+        <label>First Name: </label>
+        <br>
+        <input id="firstName" name="First Name" type="text" minlength="1" maxlength="32" required>
+        <br>
+
+        <label>Last Name: </label>
+        <br>
+        <input id="lastName" name="Last Name" type="text" minlength="1" maxlength="32" required>
+        <br>
+
+        <label>Password: </label>
+        <br>
+        <input id="password" name="password" type="password" required>
+        <br>
+        
+        <label>Email: </label>
+        <br>
+        <input id="email" name="Email" type="email" required>
+        <br>
+
+        <label for="phone" name="Telephone Number">Telephone Number: </label>
+        <br>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{4}">
+        <br>
+
+        <label>Birth Month: </label>
+        <br>
+        <input id="birthMonth" name="Birth Month" type="text">
+        <br>
+
+        <label>Birth Year: </label>
+        <br>
+        <input id="birthYear" name="Birth Year" type="text">
+        <br>
+
+        <label>Can we email you? </label>
+        <input id="canWeEmail" name="Can We Email" type="checkbox">
+        <br>
+
+        <fieldset>
+            <legend>Can we text you? </legend> 
+            <input type="radio" name="status">
+            <label for="yes">Yes</label>
+            <br>
+            <input type="radio" name="status">
+            <label for="no">No</label>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Do you like our product? </legend> 
+            <input type="radio" name="rating">
+            <label for="1">1 - don't like it</label>
+            <br>
+            <input type="radio" name="rating">
+            <label for="2">2</label>
+            <br>
+            <input type="radio" name="rating">
+            <label for="3">3</label>
+            <br>
+            <input type="radio" name="rating">
+            <label for="4">4</label>
+            <br>
+            <input type="radio" name="rating">
+            <label for="5">5 - love it</label>
+        </fieldset>
+        <br>
+
+        <input type="reset">
+
+        <input type="submit">
+
+
+    </form>
+
+
+</body>
+</html>
