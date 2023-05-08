@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+<body>
+    <div>
+        <h1>To Do List</h1>
+        <div>
+          <input type="text" id="new-item-input" placeholder="Enter new to do">
+          <button id="btnAddSomething">Add Something</button>
+        </div>
+        <ul id="todo-list"></ul>
+        <p>Number of Things to Do: <span id="item-count">0</span></p>
+      </div>
+	
+    <script>
+			"use strict";
+            
+            const newItemInput = document.querySelector('#new-item-input');
+            const addButton = document.querySelector('#add-button');
+            const todoList = document.querySelector('#todo-list');
+            const itemCount = document.querySelector('#item-count');
+
+			document.getElementById("btnAddSomething").addEventListener("click", addSomething);
+
+            let count = 0;
+
+			function addSomething(event)
+			{
+                const newItemName = newItemInput.value;
+                const newItem = document.createElement("li");
+                newItem.textContent = newItemName;
+                
+                const removeButton = document.createElement("button");
+                removeButton.textContent = 'Remove';
+                removeButton.addEventListener("click", function() {
+                    todoList.removeChild(newItem);
+                    count--;
+                    itemCount.textContent = count;
+                });
+                
+                newItem.appendChild(removeButton);
+                todoList.appendChild(newItem);
+                newItemInput.value = "";
+                count++;
+                itemCount.textContent = count;
+			}
+
+            addButton.addEventListener("click", addSomething);
+
+			
+		</script>
+</body>
+</html>
